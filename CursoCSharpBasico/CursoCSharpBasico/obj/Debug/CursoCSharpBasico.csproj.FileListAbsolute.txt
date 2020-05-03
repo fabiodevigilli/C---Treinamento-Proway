@@ -1,0 +1,5 @@
+C:\Repositórios\ReposProwayVideos\CursoCSharpBasico\CursoCSharpBasico\bin\Debug\CursoCSharpBasico.exe.config
+C:\Repositórios\ReposProwayVideos\CursoCSharpBasico\CursoCSharpBasico\bin\Debug\CursoCSharpBasico.exe
+C:\Repositórios\ReposProwayVideos\CursoCSharpBasico\CursoCSharpBasico\bin\Debug\CursoCSharpBasico.pdb
+C:\Repositórios\ReposProwayVideos\CursoCSharpBasico\CursoCSharpBasico\obj\Debug\CursoCSharpBasico.exe
+C:\Repositórios\ReposProwayVideos\CursoCSharpBasico\CursoCSharpBasico\obj\Debug\CursoCSharpBasico.pdb
