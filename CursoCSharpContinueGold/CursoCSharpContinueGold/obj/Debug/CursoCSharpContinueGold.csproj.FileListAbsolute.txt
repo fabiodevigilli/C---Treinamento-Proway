@@ -1,0 +1,5 @@
+C:\Repositórios\ReposProwayVideos\CursoCSharpContinueGold\CursoCSharpContinueGold\bin\Debug\CursoCSharpContinueGold.exe.config
+C:\Repositórios\ReposProwayVideos\CursoCSharpContinueGold\CursoCSharpContinueGold\bin\Debug\CursoCSharpContinueGold.exe
+C:\Repositórios\ReposProwayVideos\CursoCSharpContinueGold\CursoCSharpContinueGold\bin\Debug\CursoCSharpContinueGold.pdb
+C:\Repositórios\ReposProwayVideos\CursoCSharpContinueGold\CursoCSharpContinueGold\obj\Debug\CursoCSharpContinueGold.exe
+C:\Repositórios\ReposProwayVideos\CursoCSharpContinueGold\CursoCSharpContinueGold\obj\Debug\CursoCSharpContinueGold.pdb

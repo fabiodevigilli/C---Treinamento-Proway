@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGold", "CursoCSharpContinueGold\CursoCSharpContinueGold.csproj", "{FEDB9014-73AF-471E-8807-B0FFE03189F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula2", "CursoCSharpContinueGoldAula2\CursoCSharpContinueGoldAula2.csproj", "{532D5174-BEFC-4146-8D39-25F58EC61FF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FEDB9014-73AF-471E-8807-B0FFE03189F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEDB9014-73AF-471E-8807-B0FFE03189F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEDB9014-73AF-471E-8807-B0FFE03189F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532D5174-BEFC-4146-8D39-25F58EC61FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532D5174-BEFC-4146-8D39-25F58EC61FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532D5174-BEFC-4146-8D39-25F58EC61FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532D5174-BEFC-4146-8D39-25F58EC61FF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
