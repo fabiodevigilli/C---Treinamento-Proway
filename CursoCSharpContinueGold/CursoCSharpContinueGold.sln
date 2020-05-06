@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGold", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula2", "CursoCSharpContinueGoldAula2\CursoCSharpContinueGoldAula2.csproj", "{532D5174-BEFC-4146-8D39-25F58EC61FF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula3", "CursoCSharpContinueGoldAula3\CursoCSharpContinueGoldAula3.csproj", "{FEDF2D74-5A0A-460D-905B-634F4F8980B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{532D5174-BEFC-4146-8D39-25F58EC61FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{532D5174-BEFC-4146-8D39-25F58EC61FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{532D5174-BEFC-4146-8D39-25F58EC61FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEDF2D74-5A0A-460D-905B-634F4F8980B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEDF2D74-5A0A-460D-905B-634F4F8980B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEDF2D74-5A0A-460D-905B-634F4F8980B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEDF2D74-5A0A-460D-905B-634F4F8980B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
