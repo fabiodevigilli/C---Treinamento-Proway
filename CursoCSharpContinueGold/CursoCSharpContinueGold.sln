@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula4", "CursoCSharpContinueGoldAula4\CursoCSharpContinueGoldAula4.csproj", "{B7F6DA97-218B-4DC4-B88C-5B3BC29E9974}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula5", "CursoCSharpContinueGoldAula5\CursoCSharpContinueGoldAula5.csproj", "{0F65A2BF-4E9F-47DB-AE9E-52E7E6BDD1E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula5WinForms", "CursoCSharpContinueGoldAula5WinForms\CursoCSharpContinueGoldAula5WinForms.csproj", "{901119A1-AAFF-4BAD-B041-6738170BA547}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B7F6DA97-218B-4DC4-B88C-5B3BC29E9974}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7F6DA97-218B-4DC4-B88C-5B3BC29E9974}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7F6DA97-218B-4DC4-B88C-5B3BC29E9974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F65A2BF-4E9F-47DB-AE9E-52E7E6BDD1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F65A2BF-4E9F-47DB-AE9E-52E7E6BDD1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F65A2BF-4E9F-47DB-AE9E-52E7E6BDD1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F65A2BF-4E9F-47DB-AE9E-52E7E6BDD1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{901119A1-AAFF-4BAD-B041-6738170BA547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{901119A1-AAFF-4BAD-B041-6738170BA547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{901119A1-AAFF-4BAD-B041-6738170BA547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{901119A1-AAFF-4BAD-B041-6738170BA547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
