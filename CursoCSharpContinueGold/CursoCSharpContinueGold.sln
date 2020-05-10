@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula5WinForms", "CursoCSharpContinueGoldAula5WinForms\CursoCSharpContinueGoldAula5WinForms.csproj", "{901119A1-AAFF-4BAD-B041-6738170BA547}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula6WinForms", "CursoCSharpContinueGoldAula6WinForms\CursoCSharpContinueGoldAula6WinForms.csproj", "{2305ED43-FA74-495F-87E0-0087E9142DD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula6ConsoleApp", "CursoCSharpContinueGoldAula6ConsoleApp\CursoCSharpContinueGoldAula6ConsoleApp.csproj", "{C3FCA856-D471-407A-85BA-1BC2163CD282}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{901119A1-AAFF-4BAD-B041-6738170BA547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{901119A1-AAFF-4BAD-B041-6738170BA547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{901119A1-AAFF-4BAD-B041-6738170BA547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2305ED43-FA74-495F-87E0-0087E9142DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2305ED43-FA74-495F-87E0-0087E9142DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2305ED43-FA74-495F-87E0-0087E9142DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2305ED43-FA74-495F-87E0-0087E9142DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3FCA856-D471-407A-85BA-1BC2163CD282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3FCA856-D471-407A-85BA-1BC2163CD282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3FCA856-D471-407A-85BA-1BC2163CD282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3FCA856-D471-407A-85BA-1BC2163CD282}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
