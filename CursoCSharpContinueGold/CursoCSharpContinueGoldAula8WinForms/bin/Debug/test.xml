@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfCliente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cliente>
+    <Id>1</Id>
+    <Nome>A</Nome>
+    <Email>asdfj@kbcnjd.com</Email>
+    <CPF>1</CPF>
+  </Cliente>
+  <Cliente>
+    <Id>2</Id>
+    <Nome>B</Nome>
+    <Email>bsdfj@kbcnjd.com</Email>
+    <CPF>2</CPF>
+  </Cliente>
+  <Cliente>
+    <Id>3</Id>
+    <Nome>C</Nome>
+    <Email>csdfj@kbcnjd.com</Email>
+    <CPF>3</CPF>
+  </Cliente>
+</ArrayOfCliente>
