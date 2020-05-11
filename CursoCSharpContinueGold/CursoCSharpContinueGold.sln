@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula8WinForms", "CursoCSharpContinueGoldAula8WinForms\CursoCSharpContinueGoldAula8WinForms.csproj", "{7221CF93-1474-466E-BE35-462CCCE476DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula9WinForms", "CursoCSharpContinueGoldAula9WinForms\CursoCSharpContinueGoldAula9WinForms.csproj", "{BC18794D-5FF7-400B-9BA0-F201F1DF0903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCSharpContinueGoldAula9ConsoleApp", "CursoCSharpContinueGoldAula9ConsoleApp\CursoCSharpContinueGoldAula9ConsoleApp.csproj", "{3C58D955-0740-4E21-A786-34F5747C4E4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{7221CF93-1474-466E-BE35-462CCCE476DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7221CF93-1474-466E-BE35-462CCCE476DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7221CF93-1474-466E-BE35-462CCCE476DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC18794D-5FF7-400B-9BA0-F201F1DF0903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC18794D-5FF7-400B-9BA0-F201F1DF0903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC18794D-5FF7-400B-9BA0-F201F1DF0903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC18794D-5FF7-400B-9BA0-F201F1DF0903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C58D955-0740-4E21-A786-34F5747C4E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C58D955-0740-4E21-A786-34F5747C4E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C58D955-0740-4E21-A786-34F5747C4E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C58D955-0740-4E21-A786-34F5747C4E4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
