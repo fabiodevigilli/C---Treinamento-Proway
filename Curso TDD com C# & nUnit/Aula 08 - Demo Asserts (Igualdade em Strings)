@@ -1,2 +1,15 @@
 ---------------- Aula 08 - Demo Asserts (Igualdade em Strings)
 
+- Efetuar a criação da nova solução (Demo_Asserts);
+- Criar os novos projetos (produção e teste);
+- Efetuar a ligação de referências;
+- Efetuar as instalações no nuget manage package, do unit, cfe aula 4;
+
+=======================================================================
+1) Testes de strings:
+- Usamos Is.EqualTo();
+- Usamos Is.EqualTo().IgnoreCase;
+- Usamos Is.Not.EqualTo;
+
+-- Podemos verificar em: https://nunit.org/docs/2.2.10/stringAssert.html
+// Documentação do NUnit, sobre string assert;
