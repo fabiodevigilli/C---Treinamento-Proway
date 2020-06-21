@@ -1,0 +1,17 @@
+*** Professor Jhonatan de Souza 
+*** devaprender.com
+
+- SQL server, com banco de dados e dados para popular o banco.
+
+* Instalar:
+- SQL server express edition (Download Media - express advanced), cfe língua utilizada no computador (senão não funciona corretamente.)
+Após instalar, executar e selecionar a opção "New Sql Server".
+Em Feature Selection, selecionar:
+a) Database engine services;
+b) SQl server replication;
+c) Full-text and semantic extractions;
+d) abaixo de shared features, manter o padrão;
+
+- SSMS (SQL Server Management Studio): versão utilizada 18.2 (baixar a versão com o idioma utilizado pelo computador);
+
+* Para iniciar o SSMS, no server name, podemos iniciar com: .\SQLEXPRESS

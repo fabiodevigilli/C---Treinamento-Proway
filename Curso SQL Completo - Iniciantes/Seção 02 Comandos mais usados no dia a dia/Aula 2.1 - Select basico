@@ -1,0 +1,16 @@
+---------- CURSO SLQ COMPLETO 2020 - INICIANTES
+
+----------------   SELECT
+-- Uilizar os comando SQL em letra maiúscula como padrão.
+
+--- pode ser usado como:
+SELECT coluna1, coluna2 FROM tabela;  -- busca as colunas especificadas
+EX:
+SELECT Title FROM Person.Person;
+-- ou 
+SELECT * FROM tabela -- busca todas as colunas da tabela
+EX:
+SELECT * FROM Person.Person;
+
+-- Exercicio: buscar FirstName e LastName da tabela person.person
+SELECT FirstName, LastName FROM Person.Person

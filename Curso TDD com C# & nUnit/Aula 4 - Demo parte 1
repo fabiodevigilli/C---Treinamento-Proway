@@ -1,0 +1,53 @@
+--------------- Aula 4 - Demo parte 1
+
+1) Vamos iniciar criando o código de produção;
+- Selecione uma blak solution;
+- Defina o nome da solução;
+- Defina o caminho do repositório;
+- OK;
+- com a solution criada, clicamos com o botão direito sobre ela, Add, New Project;
+- Tipo Class Library(.Net Framework), do Windows Desktop;
+- De o nome ao projeto, neste caso, Calculadora;
+- Vamos criar o código de produção;
+
+
+----------------- Aula 5 - Demo parte 2
+2) Vamos criar a classe de testes:
+- Tipo Class Library(.Net Framework), do Windows Desktop;
+- De o nome ao projeto, neste caso, Calculadora.Tests;
+- Uma vez criada esta nova classe, acessamos a references dela, AddReference, 
+		solution, perojects, Selecionar "Calculadora", ok;
+- Após adicionar uma referencia, é bom fazer um build solution;
+
+Na solução, clicar com botão direito, Manage Nuget Packages;
+- Instalamos:
+NUnit - Versão 3.11.0
+NUnit3TestAdapter - Versão 3.13.0 
+NUnit.ConsoleRunner - Versão 3.10.0
+FluentAssertions - Versão 5.6.0
+
+
+3) Na classe de teste, vamos criar dois métodos de testes;
+- Criamos a class e depois os métodos, cfe exemplo da aula 2;
+- Uma vez criados os métodos para testes, vemos utilizar o test runner;
+- Na barra superior do menu, selecionamos "Test", "Windows", "Test Explorer" (ou na minha versão do VS, "Test", "Test Explorer");
+
+------------------ Aula 6 Demo parte3
+
+4) Refatorar, deixar o código mais limpo, corrigir erros;
+
+
+// Passo a passo: Criar e executar testes de unidade para código gerenciado
+// https://docs.microsoft.com/pt-br/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code?view=vs-2019
+
+// Noções básicas de teste de unidade
+// https://docs.microsoft.com/pt-br/visualstudio/test/unit-test-basics?view=vs-2019
+
+- EXERCÍCIOS:
+- Adicionar método para subtrair e dividir;
+- Criar os testes, para estes novos métodos;
+
+
+
+
+

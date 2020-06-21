@@ -1,0 +1,18 @@
+------------------  COUNT
+Retorna quantidade de linhas em determinada condição
+SELECT COUNT(*) FOM TABELA
+SELECT COUNT(DISTINCT coluna1) FOM TABELA
+
+-- EXEMPLO
+SELECT COUNT(*) FROM PERSON.Person -- resultado: 19.972
+SELECT COUNT(DISTINCT Title) FROM PERSON.Person
+
+---- EXERCICIOS:
+1) eu quero saber quantos produtos temos cadastrados em nossa tabela produtos (production.product)
+SELECT COUNT(*) FROM Production.Product
+
+2)eu quero saber quantos tamanhos de produtos temos cadastrados em nossa tabela (production.product)
+SELECT COUNT(Size) FROM Production.Product
+
+3) eu quero saber quantos tamanhos diferentes de produtos eu tenho cadastrado em nossa tabela (production.product)
+SELECT COUNT(DISTINCT Size) FROM Production.Product

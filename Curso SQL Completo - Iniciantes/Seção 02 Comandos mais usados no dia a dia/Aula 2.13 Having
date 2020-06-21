@@ -1,0 +1,20 @@
+------------------- HAVING
+O Having é basicamente muito usado em junção com o group by para filtrar resultados de um agrupamento
+Ou seja, é um where para dados agrupados
+A grande diferença entre HAVING E WHERE é que o HAVING é aplicado depois que os dados já foram agrupados, enquanto o WHERE é aplicado antes dos dados serem agrupados.
+
+SELECT coluna1, funcaoAgregacao(coluna2) FROM nomeTabela GROUP BY coluna1 HAVING condicao;
+
+---- EXEMPLO
+SELECT FirstName, COUNT(FirstName) AS "Quantidade" FROM PERSON.Person GROUP BY FirstName HAVING COUNT(FirstName)>10
+
+SELECT ProductID, SUM(LineTotal) AS "Total" FROM Sales.SalesOrderDetail GROUP BY ProductID HAVING SUM(LineTotal) BETWEEN 162000 AND 500000
+
+SELECT FirstName, COUNT(FirstName) AS "Quantidade" FROM Person.Person WHERE Title = 'Mr.' GROUP BY FirstName HAVING COUNT(FirstName)>10
+
+------ EXERCICIOS
+1) Estamos querendo identificar as provincias(stateProvinceId) com o maior numero de cadastros no nosso sistema, então é preciso encontrar quais provincias estão registradas no banco de dados mais que 1000 vezes
+SELECT StateProvinceID, COUNT(StateProvinceID) AS "Quantidade" FROM PERSON.Address GROUP BY StateProvinceID HAVING COUNT(StateProvinceID) > 1000
+
+2) Sendo que trata de uma multinacional os gerentes querem saber quais os produtos(productId) não estão trazendo em média no mínimo 1 milhão em total de vendas (lineTotal)
+SELECT ProductID, AVG(LineTotal) "Média Total Vendas" FROM SALES.SalesOrderDetail GROUP BY ProductID HAVING AVG(LineTotal) < 1000000

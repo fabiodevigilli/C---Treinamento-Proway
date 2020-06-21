@@ -1,0 +1,4 @@
+** Restaurando Banco de Dados:
+
+1) baixar o arquivo da aula-Seção 1.4;
+2) Em Bando de Dados, clicar com o botão direito, selecionar,  Restarurar banco de dados, clicar em dispositivo, clicar no botão ao lado com "...", clicar em add, e navegar até o arquivo que baixamos no item anterior. Selecionar o arquivo, ok, ok, ok. Finalizado.

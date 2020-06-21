@@ -1,0 +1,27 @@
+---------------- TIPOS DE DADOS
+* São os principais:
+1 - Booleanos: por padrão ele é inicializado como nulo, e pode receber tanto 1 ou 0 (tipo Bit);
+2 - Caractere: 
+tamanho fixo - char // permite inserir até uma quantidade fixa de caracteres e sempre ocupa todo o espaço reservado 10/50;
+tamanho variavel - varchar ou nvarchar // permite inserir até uma quantidade que for definida, porém, só usa o espaço que for preenchido 10/50;
+3 - Números: 
+a)valores extatos:
+- TINYINT - não tem parte valor fracionados(ex: 1.43, 24.23), somente 1,123123,324234,313123, etc...
+- SMALLINT - mesma coisa, porém, limite maior
+- INT - mesma coisa, porém, limite maior
+- BIGINT - mesma coisa, porém, limite maior
+
+b)NUMERIC OU DECIMAL - valores extatos, porém, permite ter parte fracionada, que também pode ser especificado a precisão e 
+escala (escala é o número de digitos na parte fracional) - ex: NUMERIC(5,2) - PRIMEIRO A PRECISÃO, DEPOIS A ESCALA, EXEMPLO 123,45
+
+C)VALORES APROXIMADOS:
+- Real: tem precisão de aproximadamente até 15 digitos;
+- Float: mesmo conceito de real;
+
+4 - Temporais:
+- Date - armazena data no formato aaaa/mm/dd
+- DateTime - armazena data e horas no formato  aaaa/mm/dd:hh:mm:ss
+- DateTime2 - armazena data e horas, com adição de milissegundos no formato  aaaa/mm/dd:hh:mm:sssssss
+- SmallDateTime - data e hora respeitando o limite entre '1900-01-01:00:00:00' até '2079-06-06:23:59:59';
+- Time - horas, minutos, segundos e milissegundos, respeitando o limite de '00:00:00.0000000' até '23:59:59,9999999';
+- DateTimeOffSet - permite armazenar informações de data e horas, incluindo o fuso horário

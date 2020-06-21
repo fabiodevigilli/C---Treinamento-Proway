@@ -1,0 +1,48 @@
+----------------- AULA 1 - INTRODUÇÃO
+https://www.youtube.com/playlist?list=PLb2HQ45KP0WvzEKQ56AZ7j5-Gsay9yPOg
+======================================
+
+CURSO DIVIDIDO EM 03 MÓDULOS:
+
+1) Introdução;
+2) nUnit Asserts;
+3) nUnit Attributes;
+
+=======================================
+
+REPOSITÓRIO DO GITHUB, PARA ACESSAR OS PROJETOS DA AUTORA DO CURSO:
+https://github.com/glaucia86/curso-tdd-csharp-nunit
+
+=======================================
+
+POR QUE ESCREVER TESTES AUTOMATIZADOS?
+
+* Equipes mais felizes:
+	- menos noites e finais de semana de trabalho;
+	- mais tempo para adicionar novas features;
+
+* Usuários mais felizes:
+	- Menos problemas em produção;
+
+* Redução de custos de negócio:
+	- defeitos encontrados antes do processo de produção;
+
+* Reuso:
+	- usar o mesmo código de testes para diferentes processos;
+	- evitar erros humanos;
+
+* Execução mais rápida:
+	- Conjunto de testes que podem ser executados de maneira automatizada;
+
+===========================================================================
+ESTRUTURA DE TESTES E TEST RUNNERS
+
+
+Código de Produção  ----   Código de Teste ---- Test RUNNERS
+								  |             /
+								  |            /
+							Framework de Teste
+
+==========================================================================
+* Framework de Teste: estaremos utilizando o nUnit, porém há outros no mercado;
+* Test Runner: é o executador dos testes;

@@ -1,0 +1,13 @@
+----------------- LIKE
+Vamos dizer que você quer encontrar uma pessoa no banco de dados, sabendo que o nome dela era ovi.... alguma coisa
+Para esta situação utilizamos o Like
+O Like não é Case sensitive!
+
+--- EXEMPLO
+
+SELECT * FROM Person.Person WHERE FirstName LIKE 'ovi%' --- Nome que começa com "ovi" e termina com alguma coisa
+SELECT * FROM Person.Person WHERE FirstName LIKE '%ovi%' ---- nome que começa com alguma coisa, então "ovi" e termina com alguma coisa
+SELECT * FROM Person.Person WHERE FirstName LIKE '%ce' --- nome que começa com alguma coisa e termina com "ce"
+
+Podemos utilizar o underline para substituir apenas um caracter, para combinações
+SELECT * FROM Person.Person WHERE FirstName LIKE '%ro_'

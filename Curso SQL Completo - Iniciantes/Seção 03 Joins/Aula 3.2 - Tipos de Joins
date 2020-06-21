@@ -1,0 +1,14 @@
+------------- TIPO DE JOINS
+
+MAIS COMUMENTE USADOS:
+PROCURAR SQL JOIN DIAGRAM => https://stackoverflow.com/questions/53949197/isnt-sql-a-left-join-b-just-a
+
+* INNER JOIN =>  Retorna apenas os resultados que correspondem(existem) tanto na tabela A, como na tabela B
+
+* FULL OUTER JOIN => É o mais completo de todos. Retorna um conjunto de todos registros correspondentes da tabela A e Tabela B quando são iguais. E além disso,
+se não houver valores correspondentes, ele simplismente irá preencher esse lado com "null".
+
+* LEFT OUTER JOIN (left join)=> Retorna um conjunto de todos os registros da Tabela A, e além disso, os registros correspondentes(quando disponíveis) na Tabela B. 
+Se não houver registros correspondentes, ele simplesmente vai preencher com "null"
+
+* RIGHT OUTER JOIN (right join) => Situação oposta do Left Outer Join.

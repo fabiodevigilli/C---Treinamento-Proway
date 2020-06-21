@@ -1,0 +1,40 @@
+------------------ CREATE TABLE
+
+SINTAXE:
+
+CREATE TABLE nomeTabela (
+	coluna1	tipo	restricaoDaColuna,
+	coluna2	tipo	restricaoDaColuna,
+	coluna3	tipo	restricaoDaColuna,
+	....
+);
+
+PRINCIPAIS RESTRIÇÕES:
+1) NOT NULL - não permite nulos;
+2) UNIQUE - força que todos os valores em uma coluna sejam diferentes;
+3) PRIMARY KEY - uma junção de NOT NULL E UNIQUE;
+4) FOREIGN KEY - identifica unicamente uma linha em outra tabela;
+5) CHECK - Força uma condição específica em uma coluna;
+6) DEFAULT - força um valor padrão quando nenhum valor é passado;
+
+- EXEMPLO:
+
+CREATE TABLE Canal (
+CanalId INT PRIMARY KEY,
+Nome VARCHAR(150) NOT NULL,
+ContagemInscritos INT DEFAULT 0,
+DataCriacao DATETIME NOT NULL
+);
+
+CREATE TABLE Video (
+VideoId INT PRIMARY KEY,
+Nome VARCHAR(150) NOT NULL,
+Visualizacoes INT DEFAULT 0,
+Likes INT DEFAULT 0,
+Dislikes INT DEFAULT 0,
+Duracao INT NOT NULL,
+CanalId INT FOREIGN KEY REFERENCES Canal(CanalId)
+);
+
+
+SELECT * INTO tabelaNova FROM tabelaAntiga --- copia todos os dados da tabela antiga e cria uma tabela nova

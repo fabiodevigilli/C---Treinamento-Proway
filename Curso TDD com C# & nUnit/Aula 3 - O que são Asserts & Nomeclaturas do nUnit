@@ -1,0 +1,38 @@
+----------------- AULA 03 - O QUE SÃO ASSERTS & NOMECLATURA DO nUNIT
+
+* Mas.. O que torna um bom Teste?
+1) Independente e Isolado;
+2) Teste comportamento único e Lógico;
+3) Teste Legível;
+4) Não teste o compilador;
+5) Confiável e Repetível;
+6) Código de Qualidade;
+7) Valioso;
+
+======================================================================
+*NOMECLATURAS
+
+[TestFixture]
+public class CalculadoraTest
+{
+	[Test]
+	public void DevoAdicionarDoisNumeros()
+	{
+		var sut = new Calculadora() --- iniciar co mvar sut, como uma boa prática de testes;
+		// System Under Test --- O que é SUT? => https://en.wikipedia.org/wiki/System_under_test
+	}
+}
+
+======================================================================
+* Ferramentas de Teste em .Net
+
+- nUnit;
+- xUnit;
+
+Estaremos trabalhando com o NUnit Test Adapter for VS2013 and VS2015 (baixar no nuget do vs);
+
+========================================================================
+* Para desenvolver um teste do zero, devemos....
+1) Criar um novo projeto de teste;
+2) Instalar o nUnit Nuget package;
+3) E enfim desenvolver as classes de teste e métodos;

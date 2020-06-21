@@ -1,0 +1,123 @@
+------ AULA 12 OUTRAS MANIPULAÇÕES (INSERT, DELETE, UPDATE, CREATE, DROP)
+
+
+-- INSERT
+INSERT INTO nome_tabela (lista-colunas) VALUES (lista-dados) -- usamos este modelo, qdo queremos inserir dados em parte das colunas disponiveis da tabela(ou seja, não inserir dados em colunas nullable).
+INSERT INTO nome_tabela VALUES (lista-dados) --- só é possível usar esta opção se inserimos dados em todas as colunas da tabela.
+
+-- UPDATE
+UPDATE nome_tabela SET campo='novo valor' WHERE condição
+update ALUNO set SEXO='M' where MATRICULA = 'UC12456711'
+
+-- ROLLBACK: desfaz a última operação executada --- https://docs.microsoft.com/pt-br/sql/t-sql/language-elements/rollback-transaction-transact-sql?view=sql-server-ver15
+
+-- DELETE
+DELETE FROM nome_tabela WHERE condição
+delete from aluno where MATRICULA = 'UC21003421'
+
+-- CREATE: cria nova tabela (objeto)
+CREATE TABLE nome_tabela (campos com tipos)
+
+CREATE TABLE avaliacao-mec (
+id_avaliacao VARCHAR(5) PRIMARY KEY,
+cpfPrimeiroAuditor VARCHAR(11),
+cpfSegundoAuditor VARCHAR(11),
+notaFinal DOUBLE)
+
+-- É possóvel criar uma tabela a partir de outra tabela
+CREATE TABLE nome_tabela AS [SELECT...]
+CRETAE TABLE ALUNO2 AS SELECT matricula, nome, sexo from ALUNO -- no select, destacamos as colunas que desejamos copiar (os dados serão copiados também)
+
+-- DROP: deleta a tabela
+DROP TABLE nome_tabela
+
+
+------- EXERCICIOS AULA 12:
+/*
+ Exercício 1 
+ - Insira 2 novos alunos na TABELA ALUNO. Fique a vontade para inventar os valores respeitando
+ os atributos que são obrigatórios.
+ - Após a inserção desses dois novos registros, traga TODOS OS ALUNOS que sejam do sexo FEMININO.
+*/
+DESCRIBE ALUNO
+INSERT INTO ALUNO (matricula,nome,sexo) VALUES ('UC45210032','Carlos Sampaio','M')
+INSERT INTO ALUNO (matricula,nome,sexo) VALUES ('UC90240612','Ana Silva','F')
+
+SELECT * FROM ALUNO
+WHERE sexo = 'F'
+
+/*
+ Exercício 2
+ - Qual o erro do comando abaixo? Corrija!
+ INSERT INTO ALUNO (matricula,nome,sexo) VALUES ('UC12005258','Claudio Manuel',null)
+*/
+-- Inserindo o novo registro
+INSERT INTO ALUNO (matricula,nome,sexo) VALUES ('UC9033358','Claudio Manuel',null)
+-- Verificando que o registro original UC12005258 realmente existe
+SELECT * FROM ALUNO
+WHERE matricula = 'UC12005258'
+
+/*
+ Exercício 3
+ - Altere o endereço completo do ALUNO de matrícula: 'UC12006429'.
+ O endereço novo é: bairro: Águas Claras, CEP: 71901-212, endereço: Rua das Paineiras LOTE 8, APT 200
+*/
+
+  -- Antes (opcional)
+ SELECT * FROM ALUNO
+ WHERE matricula = 'UC12006429'
+ 
+ 
+ UPDATE ALUNO
+ SET bairro = 'Águas Claras', cep = '71901-212', endereco = 'Rua das Paineiras LOTE 8, APT 200'
+ WHERE matricula = 'UC12006429'
+ 
+ 
+  -- Depois da alteração (opcional)
+ SELECT * FROM ALUNO
+ WHERE matricula = 'UC12006429'
+ 
+/*
+ Exercício 4
+ - Altere a situação do ALUNO REPROVADO para APROVADO: Matricula: UC12005258; nota: 7.5
+*/
+ -- Conferindo antes 
+SELECT * FROM frequenta
+WHERE matricula = 'UC12005258'
+
+-- Alterar
+UPDATE FREQUENTA
+SET nota = 7.5
+WHERE matricula = 'UC12005258'
+
+ -- Conferindo após a alteração 
+SELECT * FROM frequenta
+WHERE matricula = 'UC12005258'
+
+
+/*
+ Exercício 5
+ - Crie uma nova TABELA com todos os alunos APROVADOS, isto é: nota >= 7 E faltas < 4.
+ - A nova tabela deve TER apenas: matricula, nome do aluno, sexo.
+*/
+ -- Criação da tabela
+ CREATE TABLE ALUNOSAPROVADOS AS (SELECT F.matricula, A.nome, A.sexo
+ FROM FREQUENTA F, ALUNO A
+ WHERE nota >= 7 AND falta < 4
+ AND F.matricula = A.matricula)
+ 
+ -- Conferindo a nova tabela (opcional)
+ SELECT * FROM ALUNOSAPROVADOS
+
+
+
+
+
+
+
+
+
+
+
+
+

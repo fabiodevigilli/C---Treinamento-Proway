@@ -1,0 +1,27 @@
+----------------------- SUBQUERIES (SUBSELECT)
+
+--- Monte um relatorio de todos os produtos cadastrados que tem preço de venda acima da media
+
+SELECT * FROM Production.Product
+
+SELECT AVG(ListPrice) FROM Production.Product
+
+SELECT * FROM Production.Product WHERE ListPrice > 438.66
+
+SELECT * FROM Production.Product WHERE ListPrice > (SELECT AVG(ListPrice) FROM Production.Product)
+
+
+---- Eu quero saber o nome dos meus funcionários que tem o cargo de "Design Engineer"
+select * from person.Person
+select * from HumanResources.Employee
+
+select FirstName from person.Person where BusinessEntityID in (select BusinessEntityID from HumanResources.Employee where JobTitle = 'Design Engineer')
+
+**** CLICAR EM "Incluir Plano de Execução Real" => Ctrl+M, para verificar qual query é mais performática.
+
+------ EXERCÍCIOS
+-- 1) Encontre todos os endereços que estão no estado de "Alberta", pode trazer todas as informações
+select * from person.Address
+select * from person.StateProvince
+
+select * from person.Address where StateProvinceID in (select StateProvinceID from person.StateProvince where Name = 'Alberta')

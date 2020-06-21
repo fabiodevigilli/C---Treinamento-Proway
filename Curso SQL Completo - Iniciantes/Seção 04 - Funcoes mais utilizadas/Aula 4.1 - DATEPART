@@ -1,0 +1,15 @@
+------------------ DATEPART
+TRABALHANDO COM DATAS OU INFROMAÇÕES PARCIAIS DE DATAS
+
+SELECT * FROM Sales.SalesOrderHeader
+
+---- PESQUISAR EM DATEPART SQL NO GOOGLE => https://docs.microsoft.com/pt-br/sql/t-sql/functions/datepart-transact-sql?view=sql-server-ver15
+
+DATEPART ( datepart , date )  
+como parâmetro, temos o datepart, que é o formato desejado, depois temos o date, que seria a coluna onde se encontra a informação.
+
+SELECT SalesOrderID, DATEPART(MONTH, OrderDate) as Mes FROM Sales.SalesOrderHeader
+SELECT SalesOrderID, DATEPART(DAY, OrderDate) as Mes FROM Sales.SalesOrderHeader
+SELECT SalesOrderID, DATEPART(YEAR, OrderDate) as Mes FROM Sales.SalesOrderHeader
+
+SELECT AVG(TotalDue) AS Media, DATEPART(MONTH, OrderDate) as Mes FROM Sales.SalesOrderHeader GROUP BY DATEPART(MONTH, OrderDate) ORDER BY Mes

@@ -1,0 +1,9 @@
+-------------- AS 
+
+O AS serve para renomear colunas ou select ou agregação
+
+Para nome simples, não precisamos usar apas duplas, mas para nome composto ou caracteres especiais sim.
+
+SELECT TOP 10 ListPrice AS "Preço" FROM Production.Product
+
+SELECT TOP 10 AVG(ListPrice) AS "Preço Médio" FROM Production.Product

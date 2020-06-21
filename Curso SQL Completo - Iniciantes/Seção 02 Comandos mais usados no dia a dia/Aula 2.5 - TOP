@@ -1,0 +1,7 @@
+----------------------- TOP
+Limita a quantidade de dados de um select de retorno
+
+SELECT TOP 10 * FROM TABELA
+
+---- EXEMPLO:
+SELECT TOP 10 * FROM Production.Product

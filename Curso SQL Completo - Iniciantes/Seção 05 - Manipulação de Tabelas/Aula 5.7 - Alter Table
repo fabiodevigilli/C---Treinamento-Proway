@@ -1,0 +1,25 @@
+-------------- ALTER TABLE
+
+SINTAXE:
+
+ALTER TABLE nomeDaTabela Acao
+
+PRINCIPAIS AÇÕES DO ALTER TABLE:
+1) ADD, REMOVER, OR Alterar uam coluna;
+2) Set valores padrões para uma coluna;
+3) Add, Remover restrições de colunas;
+4) Renomear uma tabela;
+
+
+- EXEMPLO EM TABELA Fictícia YOUTUBE (COLUNAS: id int primary key, nome varchar(150) not null unique, categoria varchar(200) not null, dataCriacao datetime not null)
+
+ALTER TABLE youtube ADD ativo bit --- adicionar coluna
+
+ALTER TABLE youtube ALTER COLUMN categoria varchar(300) not null -- alterar limite de coluna
+
+EXEC sp_RENAME 'nomeTabela.nomeColunaAtual', 'nomeColunaNova', 'COLUMN' --- alterar nome de coluna
+
+EXEC SP_rename 'nomeTabelaAtual', 'nomeTabelaNova' --- alterar nome da tabela
+
+
+

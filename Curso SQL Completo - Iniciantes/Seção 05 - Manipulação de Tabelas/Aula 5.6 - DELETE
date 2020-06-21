@@ -1,0 +1,6 @@
+----------------- DELETE
+
+SINATXE:
+
+DELETE FROM nomeTabela
+WHERE condição

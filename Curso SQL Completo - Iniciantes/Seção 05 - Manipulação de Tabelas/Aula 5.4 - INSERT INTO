@@ -1,0 +1,14 @@
+--------------- INSERT INTO
+
+SINTAXE:
+
+INSERT INTO nomeTabela(coluna1, coluna2, ...) VALUES (valor1, valor2, ...) --- para inserir uma linha
+
+INSERT INTO nomeTabela(coluna1, coluna2, ...) 
+VALUES (valor1, valor2, ...)
+VALUES (valor1, valor2, ...)
+VALUES (valor1, valor2, ...) --- para inserir mais linhas
+
+INSERT INTO TabelaA (coluna1)
+SELECT coluna2
+FROM TabelaB --- para inserir valores de uma tabela em outra tabela

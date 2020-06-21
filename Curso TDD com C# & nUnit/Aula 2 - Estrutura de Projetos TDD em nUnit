@@ -1,0 +1,44 @@
+------------------ AULA 2 - ESTRUTURA DE PROJETOS TDD EM NUNIT
+
+====================================================================
+* Estrutura Organizacional de Testes do nUnit
+
+								PROJETO DE TESTE
+
+		Classes de Teste							Classes de Teste
+
+Métodos		Métodos 	Métodos 		 	Métodos		Métodos 	Métodos
+   de		  de		  de	  			  de		  de		  de		 
+Testes  	Testes 		Testes   			Testes  	Testes 		Testes  
+
+===============================================================================
+* É criado um projeto de testes, no visual studio, com referências ao projeto de produção
+* São classes públicas com atributos do nUnit;
+* Os métodos de teste é um método public void (aqui ocorre o teste propriemente dito, indicando se aquele teste deve passar ou falhar);
+
+===============================================================================
+* Exemplo:
+
+[TestFixture]  /// Atributo do nUnit ---- (TestFixture - indica para o test runner que precisamos testar esta classe)
+public class CalculadoraTests
+{
+	[Test]   /// Atributo do nUnit ------ (Test - indica que este método deve ser testado)
+	public void DevoAdicionarDoisNumeros(){
+		// desenvolvimento do código teste
+	}
+}
+
+===============================================================================
+* O que são Asserts?
+- Os Aserts (afirmações) são rsponsáveis em dizer para os Test Runners se um determinado teste passou ou falhou;
+
+* Exemplo:
+
+[Test]
+public void DevoAdicionardoisNumeros()
+{
+	Assert.That(Calculadora.Add(1,2), Is.EqualTo(3)); ----aqui dizemos o que vai ser feito pelo método e o que é esperado;
+	
+	// versão antiga nUnit: asserts
+	Assert.AreEqual(3, Calculadora.Add(1,2));
+}

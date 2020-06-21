@@ -1,0 +1,16 @@
+--------------- UNION
+O Union combina dois ou mais resultados de um select em um resultado apenas
+
+SELECT coluna1, coluna2 FROM tabela1 UNION SELECT coluna1, coluna2 FROM tabela 2
+
+DEVE SELECIONAR AS MESMAS QTDE DE COLUNAS E O MESMO TIPO DE DADOS: STRING, INT, ETC.
+IRÃO REMOVER OS RESULTADOS DUPLICADOS (EXCETO SE VC USAR O UNION ALL)
+
+-- EXEMPLO
+SELECT ProductID, Name, ProductNumber FROM Production.Product WHERE Name LIKE '%Chain%'
+UNION
+SELECT ProductID, Name, ProductNumber FROM Production.Product WHERE Name LIKE '%Decal%'
+
+SELECT FirstName, Title, MiddleName FROM Person.Person WHERE Title = 'Mr.'
+UNION
+SELECT FirstName, Title, MiddleName FROM Person.Person WHERE MiddleName = 'A'

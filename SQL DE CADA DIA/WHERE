@@ -1,0 +1,64 @@
+--- CLÁUSULA WHERE:
+-- limita a consulta, podemos utilizar os operadores: >, <, >=, <=, <>, !=, =, BETWEEN, IN, LIKE E operadores LÓGICOS (AND,OR, NOT).
+SELECT * FROM FREQUENTA -- 78 CADASTROS
+
+SELECT * FROM ALUNO WHERE SEXO='M';
+
+SELECT * FROM FREQUENTA WHERE NOTA >= 9.0;
+
+SELECT * FROM FREQUENTA WHERE NOTA > 8.0;
+
+SELECT * FROM FREQUENTA WHERE NOTA < 7.0;
+
+SELECT * FROM FREQUENTA WHERE NOTA <= 6.0;
+
+SELECT * FROM FREQUENTA WHERE NOTA <> 6.0;
+
+SELECT * FROM FREQUENTA WHERE NOTA != 6.0;
+
+SELECT * FROM FREQUENTA WHERE NOTA = 10;
+
+SELECT * FROM FREQUENTA WHERE NOTA BETWEEN 7 AND 9; -- 49 REGISTROS
+
+SELECT * FROM FREQUENTA WHERE NOTA >= 7 AND NOTA <= 9; -- 49 REGISTROS
+
+-- "IN" compara valor de uma coluna, com valores pré-definidos (LISTA DE VALORES):
+SELECT * FROM FREQUENTA WHERE NOTA IN (7,8,9); -- 15 REGISTROS
+
+SELECT * FROM FREQUENTA WHERE NOTA=7 OR NOTA=8 OR NOTA=9; -- 15 REGISTROS
+
+-- "LIKE" comparar valor de uma coluna com o valor que não sabemos dele todo. Útil na manipulação de strings.
+-- "%" representa zero ou mais caracteres, "_" representa exatamente um caractere.
+SELECT * FROM ALUNO WHERE NOME LIKE 'A%' -- Começa com a letra "A" e depois pode ter qualquer coisa
+
+SELECT * FROM ALUNO WHERE NOME LIKE '%A' -- Começa com qualquer coisa, mas termina com a letra "A"
+
+SELECT * FROM ALUNO WHERE bairro LIKE '%mam%' -- que contenha 'mam'
+
+SELECT * FROM ALUNO WHERE nome LIKE '____Sampaio' -- Temos três letras e espaço em branco, total de quatro caracteres, representados por '_' e o sobrenome Sampaio
+
+-- Comparando valores nulos, Is null, Is not null
+SELECT * FROM ALUNO WHERE cidade is null
+
+SELECT * FROM ALUNO WHERE cidade is not null
+
+--- operadores lógicos And, Or, Not
+SELECT * FROM ALUNO WHERE SEXO='M' AND BAIRRO='Aguas Claras';
+SELECT * FROM ALUNO WHERE BAIRRO='Asa Norte' OR BAIRRO='Samambaia Norte'
+SELECT * FROM ALUNO WHERE NOT bairro='Asa norte';
+SELECT * FROM ALUNO WHERE NOT (BAIRRO='Taguatinga Sul' OR bairro='Asa Norte')
+
+
+---- EXERCÍCIOS DA AULA 5:
+-- 5-1: SELECT nome as 'Nome Completo', BAIRRO as 'Onde Mora' FROM ALUNO WHERE SEXO='M' AND BAIRRO='Asa Norte'
+-- 5-2: SELECT * FROM FREQUENTA WHERE (NOTA BETWEEN 8 AND 9) AND (FALTA>=2);
+-- 5-3: SELECT * FROM ALUNO WHERE NOME LIKE 'C%' AND CIDADE IS NOT NULL ORDER BY NOME ASC;
+-- 5-4: SELECT * FROM FREQUENTA WHERE NOTA >=7 AND FALTA<4;
+-- 5-5: SELECT * FROM FREQUENTA WHERE NOTA<7 AND FALTA>=4;
+
+
+
+
+
+
+

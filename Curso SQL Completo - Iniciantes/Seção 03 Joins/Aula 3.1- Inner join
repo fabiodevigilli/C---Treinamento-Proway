@@ -1,0 +1,28 @@
+---------------- INNER JOIN
+EXISTEM 03 TIPOS DE JOINS MAIS USADOS:
+- INNER JOIN, OUTER JOIN E SELF-JOIN
+
+USAMOS O JOIN PARA UNIR DUAS TABELAS E PARA TRAZERMOS INFORMAÇÕES DE AMBAS, SENDO QUE ESTAS TABELAS DEVEM POSSUIR UMA PRIMARY KEY E FOREING KEY DE LIGAÇÃO
+
+EXEMPLO:
+SELECT C.ClienteId, C.Nome, E.Rua, E.Cidade FROM Cliente C INNER JOIN Endereco E ON E.EnderecoId = C.EnderecoId
+
+SELECT PP.BusinessEntityID, PP.FirstName, PP.LastName, PEA.EmailAddress FROM PERSON.Person PP INNER JOIN PERSON.EmailAddress PEA ON PP.BusinessEntityID = PEA.BusinessEntityID
+
+SELECT PP.Name, PP.ListPrice, PPS.Name AS "Subcategoria"
+FROM Production.Product PP
+INNER JOIN Production.ProductSubcategory PPS ON PP.ProductSubcategoryID = PPS.ProductSubcategoryID
+
+SELECT TOP 10 * 
+FROM Person.BusinessEntityAddress BEA
+INNER JOIN PERSON.Address PA ON BEA.AddressID = PA.AddressID
+
+
+------- EXERCÍCIO
+1)SELECT TOP 10 PPP.BusinessEntityID, PPT.Name, PPT.PhoneNumberTypeID, PPP.PhoneNumber
+FROM Person.PhoneNumberType PPT
+INNER JOIN Person.PersonPhone PPP ON PPT.PhoneNumberTypeID = PPP.PhoneNumberTypeID
+
+2) SELECT TOP 10 PA.AddressID, PA.City, PSP.StateProvinceID, PSP.Name
+FROM Person.StateProvince PSP
+INNER JOIN Person.Address PA ON PSP.StateProvinceID = PA.StateProvinceID

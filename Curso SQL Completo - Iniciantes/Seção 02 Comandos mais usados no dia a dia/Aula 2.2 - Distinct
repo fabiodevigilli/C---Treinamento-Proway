@@ -1,0 +1,7 @@
+------------ DISTINCT
+-- Omitir dados duplicados.
+Ex: SELECT DISTINCT FirstName FROM Person.Person
+
+-- Exercício: qtos sobrenomes únicos temos na tabela person.person
+SELECT DISTINCT LastName FROM Person.Person
+SELECT COUNT(DISTINCT LastName) FROM Person.Person

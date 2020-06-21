@@ -1,0 +1,47 @@
+------- FUNÇÕES DE STRING (UPPER, LOWER, INITCAP, LENGTH, SUBSTR, CONCAT, TRIM, INSTR, REPLACE, RPAD, LPAD)
+SELECT UPPER('meu nome é fábio') AS 'UPPER'
+
+SELECT LOWER('MEU NOME É FÁBIO') AS 'LOWER'
+
+- INITCAP, NÃO EXISTE NO MYSQL
+
+-- PARA LENGTH, UTILIZAMOS SELECT LEN(NOME) FROM ALUNO WHERE NOME LIKE 'Benta%'; --https://www.1keydata.com/sql/sql-length.html
+SELECT LEN('ASDASD') --https://www.w3schools.com/sql/func_sqlserver_len.asp
+
+-- PARA SUBSTR, UTILIZAMOS:
+SELECT SUBSTRING('Meu nome é Fábio',4,13); --- SUBSTRING(TEXTO, POSIÇÃO INICIAL, COMPRIMENTO DE CARACTERES)
+
+-- CONCAT
+SELECT CONCAT('Meu nome',' é Fábio')
+
+-- TRIM:
+SELECT TRIM('    Meu nome é Fábio     ')  AS S--- FUNÇÃO TRIM REMOVE OS ESPAÇOS NO ÍNICIO E FIM DA STRING
+
+--- INSRT, PARA SQL NÃO EXISTE FUNÇÃO EXATA EQUIVALENTE, A MAIS PRÓXIMA É A CHARINDEX, COM LIMITAÇÕES -- http://www.sqlines.com/oracle/functions/instr
+SELECT CHARINDEX( 'York', 'New York', 1);
+SELECT CHARINDEX( 'k', 'New York', 1);
+
+-- Replace:
+SELECT REPLACE('meu nome é fabio', 'e','*')
+
+-- LPAD não existe no sql, o seu equivalente é:   https://database.guide/left-padding-in-sql-server-3-lpad-equivalents/
+SELECT RIGHT('000' + '1234', 7);
+SELECT RIGHT(REPLICATE('0', 3) + '1234', 7);
+SELECT RIGHT(REPLICATE('0', 3) + LEFT('1234', 4), 7); -- o mais completo seria este
+
+-- RPAD não existe no sql, o seu equivalente é:  ----https://www.sqlservercurry.com/2011/10/sql-server-lpad-and-rpad-functions.html
+declare @num int
+set @num=872382
+select
+right(replicate('0',10)+cast(@num as varchar(15)),10) aS lpad_number,
+left(cast(@num as varchar(15))+replicate('0',10),10) as rpad_number
+
+--- left, right e replicate -- https://mahtodeepak05.wordpress.com/2017/01/06/sqlserverlearning-string-padding-in-sql-server-lpadrpad/
+SELECT LEFT('abcdefg',1) as esquerda , RIGHT('abcdefg',1) as direita;
+SELECT REPLICATE('AB', 4) as "REPLICATE"
+
+----------- EXERCÍCIOS DA AULA 10
+-- Exercicio 10.1: SELECT UPPER(bairro),COUNT(*), count(bairro) FROM ALUNO GROUP BY bairro HAVING bairro IS NOT NULL ORDER BY bairro 
+SELECT UPPER(bairro),COUNT(*) FROM PROFESSOR GROUP BY bairro HAVING bairro IS NOT NULL ORDER BY bairro 
+
+-- Exercicio 10.2: select replace(p.NOME,' ','*'), p.SEXO, p.DATANASCIMENTO, GETDATE() as "Hoje", DATEDIFF(YY, p.DATANASCIMENTO, GETDATE()) as "Idade" from PROFESSOR p

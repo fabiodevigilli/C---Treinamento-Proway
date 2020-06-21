@@ -1,0 +1,7 @@
+----------------- In
+Usamos o operador IN junto com o WHERE, para verificar se um valor corresponde com qualquer valor passado na lista de valores.
+o IN é mais performático do que utilizar varias condições OU
+-- Exemplo:
+SELECT * FROM Production.Product WHERE Color IN ('blue', 'red') ORDER BY Color
+SELECT * FROM Person.Person WHERE BusinessEntityID IN (2,7,13)
+SELECT * FROM Person.Person WHERE BusinessEntityID NOT IN (2,7,13)

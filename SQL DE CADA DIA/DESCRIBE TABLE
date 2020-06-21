@@ -1,0 +1,11 @@
+-- DESCRIBE ALUNO; NO CASO DO BANCO ORACLE
+
+-- SERIA EQUIVALENTE A sp_help
+sp_help ALUNO;
+
+-- temos também:
+exec sp_columns ALUNO;
+
+sp_help "[SchemaName].[TableName]" 
+
+sp_help "[InstanceName].[SchemaName].[TableName]"

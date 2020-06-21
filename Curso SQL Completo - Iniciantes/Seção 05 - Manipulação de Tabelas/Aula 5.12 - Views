@@ -1,0 +1,10 @@
+---------------- VIEWS
+
+usar views, que são tabelas criadas para consukta onde voc~e usa outras tabelas como base para criar uma nova tabela de pesquisa com apenas dados especificos que você precisa de uma tabela.
+
+SINTAXE:
+
+CREATE VIEW [Pessoas Simplificado] AS
+SELECT FirstName, MiddleName, LastName
+FROM Person.Person
+WHERE Title = "Ms."

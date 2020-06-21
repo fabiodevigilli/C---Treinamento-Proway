@@ -1,0 +1,2 @@
+ORACLE SGBD: https://www.oracle.com/database/technologies/oracle-database-software-downloads.html
+SQL Developer: https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html

@@ -1,0 +1,157 @@
+----  AULA 11 JOIN (JOIN, INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, CROSS JOIN)
+
+-- esta é uma maneira de se fazer um join, ligando em where as chaves
+SELECT a.MATRICULA, a.NOME, f.CODTURMA from ALUNO a, FREQUENTA f where a.MATRICULA = f.MATRICULA
+
+-- JOIN
+SELECT a.MATRICULA, a.NOME, f.CODTURMA from ALUNO a join FREQUENTA f on a.MATRICULA = f.MATRICULA
+
+-- Natural JOIN : podemos utilizar qdo o atributo que liga duas tabelas tem que ter o mesmo tipo de dado e o mesmo nome.
+-- Ex: Tabelas de Aluno e Frequenta, podem ser ligadas no atributo matricula, não sendo utilizar o "on" de ligação.
+SELECT * FROM t1 NATURAL JOIN t2;
+
+
+-- 	INNER JOIN: relacionando duas tabelas atraves chaves estrangeiras.
+SELECT A.MATRICULA, A.NOME, F.CODTURMA FROM ALUNO A INNER JOIN FREQUENTA F ON A.MATRICULA = F.MATRICULA
+
+
+-- 	LEFT JOIN: além do relacionamento entre duas tabelas, mas também os dados não rela,cionados na tabela à esquerda do join.
+-- Caso não exista valores, as colunas da lista da seleção da tabela à direita serão nulos.
+insert into aluno values('UC12456711','Ana Valente', 'F', null, null, null, null, null, null, null)
+select a.MATRICULA, a.NOME, f.CODTURMA, f.NOTA from aluno a left join FREQUENTA f on a.MATRICULA = f.MATRICULA
+
+-- 	RIGHT JOIN: faz o inverso do left join.
+insert into FREQUENTA values('UC124564444', 'T01', NULL, NULL, NULL, NULL)
+select a.MATRICULA, a.NOME, f.CODTURMA, f.NOTA from aluno a right join FREQUENTA f on a.MATRICULA = f.MATRICULA
+
+-- FULL JOIN: considera ambos os elementos, tanto da esquerda, quanto da direita
+
+-- CROSS JOIN: MULTIPLICA A TABELA 1 PELA TABELA 2 (CONHECIDO TAMBÉM COMO PRODUTO CARTESIANO)
+select a.MATRICULA, a.NOME, f.CODTURMA, f.NOTA from aluno a CROSS join FREQUENTA f
+
+
+------ EXERCICIOS AULA 11
+/*
+
+ Exercício 1 
+ - Traga numa consulta:
+ 1. A turma em que cada professor ensina. Para TURMA use: codTurma, nomeTurma, turno.
+ 2. A disciplina de cada turma vinculada. Para DISCIPLINA use: codDisciplina, nomeDisciplina.
+ 3. Para professor traga as seguintes informações: matrícula, nome, especialidade.
+*/
+SELECT P.matricula, P.nome, P.especialidade, T.codTurma, T.nomeTurma, T.turno, D.codDisciplina, D.nomeDisciplina
+FROM PROFESSOR P,ENSINA E, TURMA T, DISCIPLINA D
+WHERE P.matricula = E.matricula AND
+E.codTurma = T.codTurma AND
+T.codDisciplina = D.codDisciplina
+
+-- Outra forma
+SELECT P.matricula, P.nome, P.especialidade, T.codTurma, T.nomeTurma, T.turno, D.codDisciplina, D.nomeDisciplina
+FROM PROFESSOR P
+INNER JOIN ENSINA E
+ON P.matricula = E.matricula 
+INNER JOIN TURMA T
+ON E.codTurma = T.codTurma 
+INNER JOIN DISCIPLINA D
+ON T.codDisciplina = D.codDisciplina
+
+
+/*
+ Exercício 2
+ - Conte a quantidade de turmas em que cada professor leciona.
+ - Ex: professor x - total: 10 turmas
+ 1. Para professor traga: nome
+ 2. Para turma traga: quantidade.
+ 3. Adicione o critério: a quantidade de turmas na consulta deve ser maior que 1.
+ 4. Ordene de forma CRESCENTE pela quantidade.
+ 5. Use um ALIAS: Quantidade de Turmas
+*/
+
+SELECT P.nome, COUNT(T.codTurma) "Quantidade de turmas"
+FROM PROFESSOR P,ENSINA E,TURMA T
+WHERE P.matricula = E.matricula
+AND E.codTurma = T.codTurma
+GROUP BY P.nome
+HAVING COUNT(T.codTurma) > 1
+ORDER BY COUNT(T.codTurma)
+
+-- Outra forma 
+SELECT P.nome, COUNT(T.codTurma) "Quantidade de turmas"
+FROM PROFESSOR P
+INNER JOIN ENSINA E
+ON P.matricula = E.matricula
+INNER JOIN TURMA T
+ON E.codTurma = T.codTurma
+GROUP BY P.nome
+HAVING COUNT(T.codTurma) > 1
+ORDER BY COUNT(T.codTurma)
+
+/*
+ Exercício 3
+ - Monte um relatório que mostre:
+ 1. Matricula do aluno, nome do aluno.
+ 2. Todas as turmas que ele está matriculado. Para turma use: codTurma, nomeTurma.
+ 3. O nome e a matrícula dos professores que lecionam essas turmas. 
+*/
+ SELECT A.matricula, A.nome, F.codTurma, T.nomeTurma, P.matricula "Matricula do Professor", P.nome "Nome do Professor"
+ FROM ALUNO A,FREQUENTA F, TURMA T, ENSINA E, PROFESSOR P
+ WHERE A.matricula = F.matricula AND
+ F.codTurma = T.codTurma AND
+ T.codTurma = E.codTurma AND
+ E.matricula = P.matricula
+ 
+ -- Outra forma
+ SELECT A.matricula, A.nome, F.codTurma, T.nomeTurma, P.matricula "Matricula do Professor", P.nome "Nome do Professor"
+ FROM ALUNO A
+ INNER JOIN FREQUENTA F
+ ON A.matricula = F.matricula
+ INNER JOIN TURMA T
+ ON F.codTurma = T.codTurma 
+ INNER JOIN ENSINA E
+ ON T.codTurma = E.codTurma
+ INNER JOIN PROFESSOR P
+ ON E.matricula = P.matricula
+ 
+/*
+ Exercício 4
+ - Qual erro do comando abaixo? 
+ SELECT matricula, nome, codTurma, matricula
+ FROM ALUNO, FREQUENTA
+ WHERE matricula = matricula
+*/
+SELECT ALUNO.matricula, nome, codTurma, FREQUENTA.matricula
+FROM ALUNO, FREQUENTA
+WHERE ALUNO.matricula = FREQUENTA.matricula
+
+/* 
+ Exercício 5
+ - Através de uma consulta responda: existe algum PROFESSOR que também é ALUNO?
+ Use o identificador 'matricula' para saber.
+*/
+SELECT P.matricula, P.nome
+FROM PROFESSOR P, ALUNO A
+WHERE P.matricula = A.matricula
+
+/*
+ Exercício 6
+ Encontre a média aritmética da turma T04 de matematica discreta.
+ Veja a TABELA 'DISCIPLINA'.
+*/
+SELECT AVG(NOTA) 
+FROM ALUNO A, FREQUENTA F, TURMA T, DISCIPLINA D
+WHERE A.MATRICULA = F.MATRICULA
+AND F.CODTURMA = T.CODTURMA
+AND T.CODDISCIPLINA = D.CODDISCIPLINA
+AND T.CODTURMA = 'T04'
+AND D.NOMEDISCIPLINA = 'Matematica Discreta';
+ 
+/*
+ Exercício 7
+ - Encontre quantos alunos cursam a matéria de 'logica matematica'
+*/
+SELECT COUNT(*)
+FROM ALUNO A, FREQUENTA F, TURMA T, DISCIPLINA D
+WHERE A.MATRICULA = F.MATRICULA
+AND F.CODTURMA = T.CODTURMA
+AND T.CODDISCIPLINA = D.CODDISCIPLINA
+AND D.nomeDisciplina = 'Logica Matematica';

@@ -1,0 +1,48 @@
+select * from ALUNO
+
+select nome, cpf, datanascimento from ALUNO
+
+-- AS com caractere especial ou mais de uma palavra, devemos utilizar "", quando palavra simples e unica, não precisa de ""
+select nome as "Nome Completo", datanascimento as nascimento, cidade as "Cid@de" from ALUNO
+
+select MATRICULA as mat, CODTURMA as "Codigo da Turma", nota, nota+0.5 as "Nota Acrescimo" from FREQUENTA
+
+-- DISTINCT se utiliza em situações onde há repetição de dados, porém, não queremos este retorno em duplicidade,
+-- OBS: só podemos usar um distinct por query, bem como, não podemos ter outras colunas de resultado antes do distinct, exemplo abaixo:
+select distinct BAIRRO from ALUNO
+
+-- CONCATENAÇÃO é utilizar o operador +,
+-- Podemos concatenar colunas como uma string na Query,
+-- Podemos concatenar colunas com coluna, string com string ou ambos
+select CIDADE+' '+BAIRRO as local from aluno
+select 'Meu nome completo é: '+NOME  from aluno
+
+
+-- Expressões Aritméticas: adição(+), subtração(-), multiplicação(*) e divisão(/)
+select MATRICULA, nota as "Nota Antiga", nota+0.5 as "Nota Nova" from FREQUENTA
+
+
+-- USANDO VALORES NULOS (Operações aritméticas com campos null, sempre terão null como resultado ):
+insert into ALUNO 
+values('UC12005210','Carla Moraes','F','74990185048',429434321, '1991-10-22',null,null,null,null);
+
+insert into ALUNO
+VALUES('UC12013217','Claudio Manuel','M','13071759029',955871329,'1987-07-05',null,null,null,null);
+
+SELECT NOME, 'ALGUMA COISA '+CIDADE AS CIDADE FROM ALUNO
+
+insert into FREQUENTA values('UC12005210','T01',7.0,0,1,2012);
+
+SELECT MATRICULA, NOTA, NOTA+NULL FROM FREQUENTA
+
+------- EXERCICIO DA AULA 4:
+4.1: 	select * from aluno;
+
+4.2: select a.NOME,a.MATRICULA, t.CODTURMA as 'Código da turma', f.NOTA, f.FALTA AS 'Qtde de faltas', f.SEMESTRE from aluno a, TURMA t, FREQUENTA f;
+
+4.3: select nome, sexo, cidade+' * '+bairro+' * '+cep+' * '+ENDERECO as endereco from ALUNO;
+
+4.4: select distinct turno from TURMA
+
+4.5: select *, NOTA-1.0 AS 'NOVA NOTA' from frequenta;
+

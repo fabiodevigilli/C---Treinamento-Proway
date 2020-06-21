@@ -1,0 +1,15 @@
+-------------- OUTER JOIN
+
+- Quero descobrir quais pessoas tem um cartão de credito registrado
+SELECT * FROM Person.Person PP
+INNER JOIN Sales.PersonCreditCard PC ON PP.BusinessEntityID = PC.BusinessEntityID
+---- COM INNER  JOIN: 19118 LINHAS
+
+SELECT * FROM Person.Person PP
+LEFT JOIN Sales.PersonCreditCard PC ON PP.BusinessEntityID = PC.BusinessEntityID
+---- COM LEFT JOIN: 19972 LINHAS
+
+SELECT * FROM Person.Person PP
+LEFT JOIN Sales.PersonCreditCard PC ON PP.BusinessEntityID = PC.BusinessEntityID
+WHERE PC.BusinessEntityID IS NULL
+---- COM LEFT JOIN: 854 LINHAS SEM REGISTRO DE CARTÃO

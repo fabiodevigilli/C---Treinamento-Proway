@@ -1,0 +1,8 @@
+------------- DROP TABLE
+
+SINTAXE:
+
+DROP TABLE nomeDaTabela
+
+Para deletar todos os dados de uma tabela, podemos usar também o comando:
+TRUNCATE * FROM nomeDaTabela

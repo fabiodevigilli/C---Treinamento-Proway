@@ -1,0 +1,16 @@
+------------------ MANIPULAÇÃO DE STRING
+
+PESQUISAR NO GOOGLE: SQL SERVER STRING OPERATIONS => https://www.w3schools.com/sql/sql_ref_sqlserver.asp OU  https://docs.microsoft.com/pt-br/sql/t-sql/functions/string-functions-transact-sql?view=sql-server-ver15
+
+
+SELECT CONCAT(FirstName,' ' ,LastName) AS Nome FROM Person.Person
+
+SELECT UPPER(FirstName) FROM Person.Person
+
+SELECT LOWER(FirstName) FROM Person.Person
+
+SELECT LEN(FirstName) FROM Person.Person -- QTDE DE CARACTERES
+
+SELECT FirstName, SUBSTRING(FirstName,1,3) FROM Person.Person --- EXTRAIR CARACTERES DA STRING
+
+SELECT REPLACE(ProductNumber, '-', '#') FROM Production.Product
