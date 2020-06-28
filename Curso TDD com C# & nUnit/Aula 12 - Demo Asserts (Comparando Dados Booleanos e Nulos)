@@ -1,0 +1,4 @@
+---------------- Aula 12 - Demo Asserts (Comparando Dados: Booleanos & Nulos)
+- estaremos dando continuidade, utilizando o exercício criado na aula 11
+- Criaremos um folder novo em DemoAssertsTests, chamado BooleanosNulos;
+- Criaremos nova classe dentro desta pasta, chamando esta classe de: CaracteristicasJogadorTests;

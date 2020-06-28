@@ -1,0 +1,11 @@
+---------------- Aula 11 - Demo Asserts (Comparando Intervalos)
+Criamos uma classe de jogos, chamada de CaracteristicasJogador,  para simular um codigo de produção;
+- Criamos uma nova pasta em DemoAssertsTests, chamada de Intervalos, sendo que nesta, criamos a classe de teste chamada de CaracteristicasJogadorTests;
+
+
+- Utilizaremos o ranges, neste exercício, verificando se valor está em intervalo específico;
+ - Podemos utilizar para casos de intervalos:
+         1) Is.GreaterThanOrEqualTo();
+         2) Is.LessThan();
+         3) Is.LessThanOrEqualTo();
+         4) Is.GreaterThan();

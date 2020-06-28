@@ -1,0 +1,10 @@
+---------------- Aula 10 - Demo Asserts (Comparando Datas e Horas)
+
+- Criamos um enum de Datas especiais;
+- Criamos uma classe de Datas Especiais Store;
+- Criamos uma classe de testes, chamada Datas Especiais Store Tests;
+- Faremos uma comapração de duas datas, a do teste, com a do código de produção;
+- Estaremos utilizando aqui tambem o método within, para atribuir tolerãncia a data;
+- Será apresentada duas maneiras de utilizar o within para atribuir tolerância em datas. sendo:
+Within(1).Milliseconds;
+Within(TimeSpan.FromMilliseconds(1));

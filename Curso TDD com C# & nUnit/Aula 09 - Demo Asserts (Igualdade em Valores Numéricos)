@@ -1,0 +1,10 @@
+---------------- Aula 09 - Demo Asserts (Igualdade em Valores Numéricos)
+
+- Criamos uma nova classe de código, chamada Calculadora, bem como, uma classe respestiva de testes, chamada Calculadora.Tests;
+- Criamos 03 métodos, sendo somar inteiros, somar decimais e dividir inteiros;
+- Is.EqualTo, pode ser usado tanto para strings, quanto para valores numéricos;
+- Tomar cuidado ao utilizar o "Within", para não correr o risco de não poder identificar erros do código em produção;
+* Outros métodos utilizados além do IsEqualTo:
+         - Is.Positive;
+         - Is.Negative;
+         - Is.NaN;

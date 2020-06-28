@@ -52,6 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculadora.cs" />
+    <Compile Include="CaracteristicasJogador.cs" />
+    <Compile Include="DatasEspeciais.cs" />
+    <Compile Include="DatasEspeciaisStore.cs" />
     <Compile Include="JuntarNomes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
