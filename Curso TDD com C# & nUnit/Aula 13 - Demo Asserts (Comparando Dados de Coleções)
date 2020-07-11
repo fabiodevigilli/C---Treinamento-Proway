@@ -1,0 +1,14 @@
+---------------- Aula 13.1 - Demo Asserts (Comparando Dados de Coleções)
+* Ajustes no programa criado na aula anterior;
+* Testes de unidades em coleções;
+* Assert.That(sut.Armas, Is.All.Not.Empty): utilizado se lista está vazia(ou seja, se uma string é empty)
+
+---------------- Aula 13.2 - Demo Asserts (Comparando Dados de Coleções)
+Assert.That(sut.Armas, Contains.Item("Teia de Aranha")): Verifica se esta string está contida na lista;
+Assert.That(sut.Armas, Has.Some.Contain("Força")): verifica se existe alguma string ma lista, que contenha a palavra "Força";
+Assert.That(sut.Armas, Is.Unique): verifica se há duplicidade de registro na lista (tem que ser o mesmo nome);
+
+---------------- Aula 13.3 - Demo Asserts (Comparando Dados de Coleções)
+Assert.That(sut.Armas, Has.None.EqualTo("Voar")): método que verificar que determinada palavra não está contida na lista;
+Assert.That(sut.Armas, Is.EquivalentTo(listaArmasEsperadas)): verifica se a lista informada, equivale exatamente a lista contida no projeto;
+Assert.That(sut.Armas, Is.Ordered): testa se a lista está ordenada;

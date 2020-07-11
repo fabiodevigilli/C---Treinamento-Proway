@@ -53,11 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BooleanosNulos\CaracteristicasJogadorTests.cs" />
+    <Compile Include="Colecoes\CaracteristicaJogadorTests.cs" />
+    <Compile Include="Excecoes\CalculadoraTests.cs" />
     <Compile Include="Igualdade\CalculadoraTests.cs" />
     <Compile Include="Igualdade\DatasEspeciaisStoreTests.cs" />
     <Compile Include="Igualdade\JuntarNomesTests.cs" />
     <Compile Include="Intervalos\CaracteristicasJogadorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referencias\CaracteristicasJogadorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Demo_Asserts\Demo_Asserts.csproj">

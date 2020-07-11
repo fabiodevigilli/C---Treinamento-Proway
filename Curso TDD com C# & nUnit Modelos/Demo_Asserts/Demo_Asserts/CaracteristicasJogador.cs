@@ -41,10 +41,10 @@ namespace Demo_Asserts
         {
             var nomes = new[]
             {
-                "Spider",
-                "Iron",
-                "Capitão",
-                "Formiga",
+                "Spider-Man",
+                "Homem de Ferro",
+                "Capitão América",
+                "Homem Formiga",
                 "Hulk"
             };
             return nomes[new Random().Next(0,nomes.Length)];
@@ -55,10 +55,11 @@ namespace Demo_Asserts
         {
             Armas = new List<string>() 
             {
-                "Espada",
-                "Adaga",
-                "Escudo",
-                "Arco"
+                "Agilidade",
+                "Agilidade Força",
+                "Força",                
+                "Inteligência Artificial",
+                "Teia de Aranha"                
             };
         }
     }

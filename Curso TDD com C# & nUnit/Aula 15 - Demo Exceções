@@ -1,0 +1,7 @@
+---------------- Aula 15 - Demo Exceções
+Teste utilizado para comparar exceções;
+Vamos utilizar o projeto da calculadora nesta aula;
+Principalmente o método de Dividir;
+Utilizaremos por exemplo:  Throws.Exception, Throws.TypeOf<DivideByZeroException>(), Throws.TypeOf<ArgumentOutOfRangeException>(),
+Throws.TypeOf<ArgumentOutOfRangeException>()
+                .With.Matches<ArgumentOutOfRangeException>(v => v.ParamName == "por"));
