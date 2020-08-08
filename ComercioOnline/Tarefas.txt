@@ -1,0 +1,30 @@
+*** VÍDEO AULA EM https://www.youtube.com/watch?v=SzuYKtoWjNY
+*** Instalar Ravendb
+
+1) Cadastro de produto
+	Valor do produto obrigatório
+	Nome do produto obrigatório
+
+2) Consulta do produto
+
+3) Cadastro da venda
+4) Consulta da venda
+
+5) Adicionar produto na venda
+6) Remover produto da venda
+	Não permitir remover produto de venda finalizada
+
+7) Finalizar a venda
+
+OBS:
+1) Criamos a solução;
+2) Criamos a pasta de Testes e a classe: ProdutoTeste;
+3) Criamos a ComercioOnline.Model, com a classe Produto;
+4) Instalamos na Solução, o pacote do NuGet, dn32.infraestrutura
+5) Criamos a herança de ModelGenericoComNome em Produto;
+6) Adicionamos a fabrica de servicos no ProdutoTeste;
+7) Adicionamos o método de InicializeInfraestrutura em ProdutoTeste;
+8) Adicionamos na solução, o pacote do Nuget, RavenDb.Client, versão 5.0.1 (situação pendente, não funciona);
+9) Criamos em ProdutoTeste, o teste de CadastroSemValorErroTeste;
+10) criamos o projeto de validação, com a classe de ValidacaoDeProduto;
+11) Instalamos para o novo projeto de validação, o pacote do NuGet, dn32.infraestrutura;
