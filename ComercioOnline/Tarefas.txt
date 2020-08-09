@@ -7,14 +7,18 @@
 
 2) Consulta do produto
 
-3) Cadastro da venda
-4) Consulta da venda
+3) Atualizar Produto
 
-5) Adicionar produto na venda
-6) Remover produto da venda
+4) Cadastro da venda
+
+5) Consulta da venda
+
+6) Adicionar produto na venda
+
+7) Remover produto da venda
 	Não permitir remover produto de venda finalizada
 
-7) Finalizar a venda
+8) Finalizar a venda
 
 OBS:
 1) Criamos a solução;
@@ -28,3 +32,9 @@ OBS:
 9) Criamos em ProdutoTeste, o teste de CadastroSemValorErroTeste;
 10) criamos o projeto de validação, com a classe de ValidacaoDeProduto;
 11) Instalamos para o novo projeto de validação, o pacote do NuGet, dn32.infraestrutura;
+12) criamos o teste CadastroSemNomeErroTeste();
+13) Criamos em ComercioOnline.Model, um folder UtilitariosDoModel, com uma classe ConstantesDeValidacaoDoModel, para receber as mensagens de erro;
+14) Em produto teste, adicionamos a herança ": TesteGenerico<Produto>"; 
+15) Refatoramos o código de ProdutoTeste, criando método de ObtenhaUmProduto(), para criação de um Produto;
+16) Refatoramos o código de ProdutoTeste, criando método de CadastreUmProduto(), para utilizarmos na criação de um produto e na consulta de um produto;
+17) Criamos o teste de consulta de Produto;
