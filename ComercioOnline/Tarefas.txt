@@ -2,21 +2,21 @@
 *** Instalar Ravendb
 
 1) Cadastro de produto
-	Valor do produto obrigatório
-	Nome do produto obrigatório
+	Valor do produto obrigatório - ok
+	Nome do produto obrigatório - ok
 
-2) Consulta do produto
+2) Consulta do produto - ok
 
-3) Atualizar Produto
+3) Atualizar Produto - ok
 
-4) Cadastro da venda
+4) Cadastro da venda - ok
 
-5) Consulta da venda
+5) Consulta da venda - ok
 
 6) Adicionar produto na venda
 
 7) Remover produto da venda
-	Não permitir remover produto de venda finalizada
+	Não permitir remover/adicionar produto de venda finalizada
 
 8) Finalizar a venda
 
