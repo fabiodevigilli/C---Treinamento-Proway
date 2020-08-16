@@ -4035,6 +4035,21 @@
           "bin/placeholder/ComercioOnline.Model.dll": {}
         }
       },
+      "ComercioOnline.Servico/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "ComercioOnline.Model": "1.0.0",
+          "ComercioOnline.Validacao": "1.0.0",
+          "dn32.infraestrutura": "1.2.4"
+        },
+        "compile": {
+          "bin/placeholder/ComercioOnline.Servico.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ComercioOnline.Servico.dll": {}
+        }
+      },
       "ComercioOnline.Validacao/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
@@ -11207,6 +11222,11 @@
       "path": "../ComercioOnline.Model/ComercioOnline.Model.csproj",
       "msbuildProject": "../ComercioOnline.Model/ComercioOnline.Model.csproj"
     },
+    "ComercioOnline.Servico/1.0.0": {
+      "type": "project",
+      "path": "../ComercioOnline.Servico/ComercioOnline.Servico.csproj",
+      "msbuildProject": "../ComercioOnline.Servico/ComercioOnline.Servico.csproj"
+    },
     "ComercioOnline.Validacao/1.0.0": {
       "type": "project",
       "path": "../ComercioOnline.Validacao/ComercioOnline.Validacao.csproj",
@@ -11216,6 +11236,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "ComercioOnline.Model >= 1.0.0",
+      "ComercioOnline.Servico >= 1.0.0",
       "ComercioOnline.Validacao >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "coverlet.collector >= 1.0.1",
@@ -11256,6 +11277,9 @@
           "projectReferences": {
             "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Model\\ComercioOnline.Model.csproj": {
               "projectPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Model\\ComercioOnline.Model.csproj"
+            },
+            "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Servico\\ComercioOnline.Servico.csproj": {
+              "projectPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Servico\\ComercioOnline.Servico.csproj"
             },
             "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Validacao\\ComercioOnline.Validacao.csproj": {
               "projectPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Validacao\\ComercioOnline.Validacao.csproj"

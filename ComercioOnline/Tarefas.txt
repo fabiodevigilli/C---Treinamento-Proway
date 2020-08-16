@@ -1,4 +1,5 @@
 *** VÍDEO AULA EM https://www.youtube.com/watch?v=SzuYKtoWjNY
+*** Total de 06 Vídeo Aulas
 *** Instalar Ravendb
 
 1) Cadastro de produto
@@ -14,9 +15,12 @@
 5) Consulta da venda - ok
 
 6) Adicionar produto na venda
+	-Tarefas não planejadas
 
 7) Remover produto da venda
 	Não permitir remover/adicionar produto de venda finalizada
+	Validar Desconto
+	Validar Valor Total
 
 8) Finalizar a venda
 

@@ -22,10 +22,9 @@ namespace ComercioOnline.Teste
         [Fact(DisplayName = nameof(ProdutoCadastroTeste))]
         public void ProdutoCadastroTeste()
         {
-            var servico = FabricaDeServico.Crie<Produto>();
             var produto = CadastreUmProduto();
             Assert.NotEqual(produto.Codigo, 0);
-            servico.Remova(produto.Codigo);
+            Servico.Remova(produto.Codigo);
         }
 
         [Fact(DisplayName = nameof(ProdutoCadastroSemValorErroTeste))]
@@ -34,11 +33,9 @@ namespace ComercioOnline.Teste
             var produto = ObtenhaUmProduto();
             produto.Valor = 0m;
 
-            var servico = FabricaDeServico.Crie<Produto>();
-
             var ex = Assert.Throws<Exception>(() =>
             {
-                servico.Cadastre(produto);
+                Servico.Cadastre(produto);
             });
 
             Assert.Equal(ex.Message, ConstantesDeValidacaoDoModel.O_VALOR_DO_PRODUTO_EH_OBRIGATORIO);
@@ -50,11 +47,9 @@ namespace ComercioOnline.Teste
             var produto = ObtenhaUmProduto();
             produto.Nome = string.Empty;
 
-            var servico = FabricaDeServico.Crie<Produto>();
-
             var ex = Assert.Throws<Exception>(() =>
             {
-                servico.Cadastre(produto);
+                Servico.Cadastre(produto);
             });
 
             Assert.Equal(ex.Message, ConstantesDeValidacao.O_NOME_DO_ELEMENTO_DEVE_SER_INFORMADO);
@@ -65,10 +60,9 @@ namespace ComercioOnline.Teste
         [Fact(DisplayName = nameof(ProdutoConsultaTeste))]
         public void ProdutoConsultaTeste()
         {
-            var servico = FabricaDeServico.Crie<Produto>();
             var produto = CadastreUmProduto();       
 
-            var produtoDoBanco = servico.Consulte(produto.Codigo);
+            var produtoDoBanco = Servico.Consulte(produto.Codigo);
 
             var json1 = Serialize(produto); // utilizado apenas para consultar visualmente o objeto, formato json
             var json2 = Serialize(produtoDoBanco); // utilizado apenas para consultar visualmente o objeto, formato json
@@ -77,7 +71,7 @@ namespace ComercioOnline.Teste
 
             Assert.Equal(ehIgual, true);
 
-            servico.Remova(produto.Codigo);
+            Servico.Remova(produto.Codigo);
         }
         #endregion
 
@@ -89,15 +83,13 @@ namespace ComercioOnline.Teste
             var produto = CadastreUmProduto();
             produto.Valor = 0m;
 
-            var servico = FabricaDeServico.Crie<Produto>();
-
             var ex = Assert.Throws<Exception>(() =>
             {
-                servico.Atualize(produto);
+                Servico.Atualize(produto);
             });
 
             Assert.Equal(ex.Message, ConstantesDeValidacaoDoModel.O_VALOR_DO_PRODUTO_EH_OBRIGATORIO);
-            servico.Remova(produto.Codigo);
+            Servico.Remova(produto.Codigo);
         }
 
         [Fact(DisplayName = nameof(ProdutoAtualizacaoSemNomeErroTeste))]
@@ -106,22 +98,18 @@ namespace ComercioOnline.Teste
             var produto = CadastreUmProduto();
             produto.Nome = string.Empty;
 
-            var servico = FabricaDeServico.Crie<Produto>();
-
             var ex = Assert.Throws<Exception>(() =>
             {
-                servico.Atualize(produto);
+                Servico.Atualize(produto);
             });
 
             Assert.Equal(ex.Message, ConstantesDeValidacao.O_NOME_DO_ELEMENTO_DEVE_SER_INFORMADO);
-            servico.Remova(produto.Codigo);
+            Servico.Remova(produto.Codigo);
         }
 
         #endregion
-
-        #region MÉTODOS PRIVADOS
-
-        private Produto CadastreUmProduto()
+          
+        public static Produto CadastreUmProduto()
         {
             var servico = FabricaDeServico.Crie<Produto>();
             var produto = ObtenhaUmProduto();
@@ -129,7 +117,7 @@ namespace ComercioOnline.Teste
             return produto;
         }
 
-        private static Produto ObtenhaUmProduto()
+        public  static Produto ObtenhaUmProduto()
         {
             return new Produto
             {
@@ -139,6 +127,10 @@ namespace ComercioOnline.Teste
             };
         }
 
-        #endregion
+        public static void RemovaUmProduto(int codigo)
+        {
+            var servico = FabricaDeServico.Crie<Produto>();
+            servico.Remova(codigo);
+        }
     }
 }

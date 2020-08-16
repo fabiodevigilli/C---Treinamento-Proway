@@ -9,6 +9,7 @@
       "ComercioOnline.Teste/1.0.0": {
         "dependencies": {
           "ComercioOnline.Model": "1.0.0",
+          "ComercioOnline.Servico": "1.0.0",
           "ComercioOnline.Validacao": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
           "coverlet.collector": "1.0.1",
@@ -2925,6 +2926,16 @@
           "ComercioOnline.Model.dll": {}
         }
       },
+      "ComercioOnline.Servico/1.0.0": {
+        "dependencies": {
+          "ComercioOnline.Model": "1.0.0",
+          "ComercioOnline.Validacao": "1.0.0",
+          "dn32.infraestrutura": "1.2.4"
+        },
+        "runtime": {
+          "ComercioOnline.Servico.dll": {}
+        }
+      },
       "ComercioOnline.Validacao/1.0.0": {
         "dependencies": {
           "ComercioOnline.Model": "1.0.0",
@@ -4448,6 +4459,11 @@
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
     "ComercioOnline.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ComercioOnline.Servico/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ComercioOnline.Model\ComercioOnline.Model.csproj" />
+    <ProjectReference Include="..\ComercioOnline.Servico\ComercioOnline.Servico.csproj" />
     <ProjectReference Include="..\ComercioOnline.Validacao\ComercioOnline.Validacao.csproj" />
   </ItemGroup>
 

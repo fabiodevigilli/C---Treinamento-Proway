@@ -2,9 +2,6 @@
 using ComercioOnline.Teste.Utilitarios;
 using dn32.infraestrutura.Fabrica;
 using dn32.infraestrutura.Generico;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace ComercioOnline.Teste
@@ -16,31 +13,38 @@ namespace ComercioOnline.Teste
             UtilitariosDeTeste.InicializarInfraestrutura();
         }
 
-        [Fact(DisplayName =nameof(VendaCadastroTeste))]
+        [Fact(DisplayName = nameof(VendaCadastroTeste))]
         public void VendaCadastroTeste()
         {
-            var servico = FabricaDeServico.Crie<Venda>();
             var venda = CadastreUmaVenda();
             Assert.NotEqual(venda.Codigo, 0);
-            servico.Remova(venda.Codigo);
+            Servico.Remova(venda.Codigo);
         }
 
         [Fact(DisplayName = nameof(VendaConsulteTeste))]
         public void VendaConsulteTeste()
         {
-            var servico = FabricaDeServico.Crie<Venda>();
             var venda = CadastreUmaVenda();
-            var vendaBancoDeDados = servico.Consulte(venda.Codigo);
+            var vendaBancoDeDados = Servico.Consulte(venda.Codigo);
 
             var ehIgual = Compare(venda, vendaBancoDeDados, nameof(Venda.DataDeAtualizacao), nameof(Venda.DataDeCadastro));
             Assert.Equal(ehIgual, true);
-            servico.Remova(venda.Codigo);
+            Servico.Remova(venda.Codigo);
         }
 
+        [Fact(DisplayName = nameof(VendaRemovaTeste))]
+        public void VendaRemovaTeste() // Este método não foi criado na aula, fiz por iniciativa própria.
+        {
+            var venda = CadastreUmaVenda();
 
-        #region MÉTODOS PRIVADOS
+            Servico.Remova(venda.Codigo);
 
-        private Venda CadastreUmaVenda()
+            var vendaBancoDeDados = Servico.Consulte(venda.Codigo);
+
+            Assert.Equal(vendaBancoDeDados, null);            
+        }
+
+        public static Venda CadastreUmaVenda()
         {
             var servico = FabricaDeServico.Crie<Venda>();
             var venda = ObtenhaUmaVenda();
@@ -48,7 +52,7 @@ namespace ComercioOnline.Teste
             return venda;
         }
 
-        private Venda ObtenhaUmaVenda()
+        public static Venda ObtenhaUmaVenda()
         {
             return new Venda
             {
@@ -58,6 +62,10 @@ namespace ComercioOnline.Teste
             };
         }
 
-        #endregion
+        public static void RemovaUmaVenda(int codigo)
+        {
+            var servico = FabricaDeServico.Crie<Venda>();
+            servico.Remova(codigo);
+        }        
     }
 }
