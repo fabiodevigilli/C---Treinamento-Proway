@@ -65,6 +65,71 @@
         }
       }
     },
+    "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Repositorio\\ComercioOnline.Repositorio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Repositorio\\ComercioOnline.Repositorio.csproj",
+        "projectName": "ComercioOnline.Repositorio",
+        "projectPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Repositorio\\ComercioOnline.Repositorio.csproj",
+        "packagesPath": "C:\\Users\\fabio.devigilli\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Repositorio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabio.devigilli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Model\\ComercioOnline.Model.csproj": {
+                "projectPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Model\\ComercioOnline.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "dn32.infraestrutura": {
+              "target": "Package",
+              "version": "[1.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Servico\\ComercioOnline.Servico.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -93,6 +158,9 @@
             "projectReferences": {
               "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Model\\ComercioOnline.Model.csproj": {
                 "projectPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Model\\ComercioOnline.Model.csproj"
+              },
+              "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Repositorio\\ComercioOnline.Repositorio.csproj": {
+                "projectPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Repositorio\\ComercioOnline.Repositorio.csproj"
               },
               "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Validacao\\ComercioOnline.Validacao.csproj": {
                 "projectPath": "C:\\Repositórios\\ReposProwayVideos\\ComercioOnline\\ComercioOnline.Validacao\\ComercioOnline.Validacao.csproj"

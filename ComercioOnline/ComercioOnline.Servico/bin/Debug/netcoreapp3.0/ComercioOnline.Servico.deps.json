@@ -9,6 +9,7 @@
       "ComercioOnline.Servico/1.0.0": {
         "dependencies": {
           "ComercioOnline.Model": "1.0.0",
+          "ComercioOnline.Repositorio": "1.0.0",
           "ComercioOnline.Validacao": "1.0.0",
           "dn32.infraestrutura": "1.2.4"
         },
@@ -2540,6 +2541,15 @@
           "ComercioOnline.Model.dll": {}
         }
       },
+      "ComercioOnline.Repositorio/1.0.0": {
+        "dependencies": {
+          "ComercioOnline.Model": "1.0.0",
+          "dn32.infraestrutura": "1.2.4"
+        },
+        "runtime": {
+          "ComercioOnline.Repositorio.dll": {}
+        }
+      },
       "ComercioOnline.Validacao/1.0.0": {
         "dependencies": {
           "ComercioOnline.Model": "1.0.0",
@@ -3944,6 +3954,11 @@
       "hashPath": "system.xml.xpath.xdocument.4.0.1.nupkg.sha512"
     },
     "ComercioOnline.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ComercioOnline.Repositorio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

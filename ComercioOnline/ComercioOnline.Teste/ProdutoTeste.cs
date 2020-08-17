@@ -1,11 +1,9 @@
 using ComercioOnline.Model;
 using ComercioOnline.Model.UtilitariosDoModel;
 using ComercioOnline.Teste.Utilitarios;
-using dn32.infraestrutura;
 using dn32.infraestrutura.Constantes;
 using dn32.infraestrutura.Fabrica;
 using dn32.infraestrutura.Generico;
-using dn32.infraestrutura.Model;
 using System;
 using Xunit;
 
@@ -60,7 +58,7 @@ namespace ComercioOnline.Teste
         [Fact(DisplayName = nameof(ProdutoConsultaTeste))]
         public void ProdutoConsultaTeste()
         {
-            var produto = CadastreUmProduto();       
+            var produto = CadastreUmProduto();
 
             var produtoDoBanco = Servico.Consulte(produto.Codigo);
 
@@ -108,7 +106,7 @@ namespace ComercioOnline.Teste
         }
 
         #endregion
-          
+
         public static Produto CadastreUmProduto()
         {
             var servico = FabricaDeServico.Crie<Produto>();
@@ -117,7 +115,7 @@ namespace ComercioOnline.Teste
             return produto;
         }
 
-        public  static Produto ObtenhaUmProduto()
+        public static Produto ObtenhaUmProduto()
         {
             return new Produto
             {

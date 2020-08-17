@@ -1,0 +1,11 @@
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.0\ComercioOnline.Repositorio.deps.json
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.0\ComercioOnline.Repositorio.dll
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.0\ComercioOnline.Model.dll
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.0\ComercioOnline.Model.pdb
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.0\ComercioOnline.Repositorio.csprojAssemblyReference.cache
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.0\ComercioOnline.Repositorio.AssemblyInfoInputs.cache
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.0\ComercioOnline.Repositorio.AssemblyInfo.cs
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.0\ComercioOnline.Repositorio.csproj.CopyComplete
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.0\ComercioOnline.Repositorio.pdb
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.0\ComercioOnline.Repositorio.dll
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.0\ComercioOnline.Repositorio.pdb

@@ -2926,9 +2926,19 @@
           "ComercioOnline.Model.dll": {}
         }
       },
+      "ComercioOnline.Repositorio/1.0.0": {
+        "dependencies": {
+          "ComercioOnline.Model": "1.0.0",
+          "dn32.infraestrutura": "1.2.4"
+        },
+        "runtime": {
+          "ComercioOnline.Repositorio.dll": {}
+        }
+      },
       "ComercioOnline.Servico/1.0.0": {
         "dependencies": {
           "ComercioOnline.Model": "1.0.0",
+          "ComercioOnline.Repositorio": "1.0.0",
           "ComercioOnline.Validacao": "1.0.0",
           "dn32.infraestrutura": "1.2.4"
         },
@@ -4459,6 +4469,11 @@
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
     "ComercioOnline.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ComercioOnline.Repositorio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

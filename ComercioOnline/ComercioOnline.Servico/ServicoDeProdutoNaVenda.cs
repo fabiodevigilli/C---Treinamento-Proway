@@ -1,4 +1,5 @@
 ﻿using ComercioOnline.Model;
+using ComercioOnline.Repositorio;
 using ComercioOnline.Validacao;
 using dn32.infraestrutura.Atributos;
 using dn32.infraestrutura.Fabrica;
@@ -39,14 +40,6 @@ namespace ComercioOnline.Servico
             Cadastre(produtoNaVenda);
             
             return produtoNaVenda;
-        }
-
-        public override void Remova(int codigo)
-        {
-            var servicoDeProduto = FabricaDeServico.Crie<Produto>();
-            var servicoDeVenda = FabricaDeServico.Crie<Venda>();
-
-            base.Remova(codigo);
-        }
+        }      
     }
 }

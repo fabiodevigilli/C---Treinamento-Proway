@@ -173,3 +173,5 @@ C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Teste\bin\Debug
 C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Teste\bin\Debug\netcoreapp3.0\runtimes\win7\lib\netstandard1.3\System.Private.ServiceModel.dll
 C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Teste\bin\Debug\netcoreapp3.0\ComercioOnline.Servico.dll
 C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Teste\bin\Debug\netcoreapp3.0\ComercioOnline.Servico.pdb
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Teste\bin\Debug\netcoreapp3.0\ComercioOnline.Repositorio.dll
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Teste\bin\Debug\netcoreapp3.0\ComercioOnline.Repositorio.pdb

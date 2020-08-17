@@ -11,3 +11,5 @@ C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Servico\obj\Deb
 C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Servico\obj\Debug\netcoreapp3.0\ComercioOnline.Servico.pdb
 C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Servico\bin\Debug\netcoreapp3.0\ComercioOnline.Validacao.dll
 C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Servico\bin\Debug\netcoreapp3.0\ComercioOnline.Validacao.pdb
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Servico\bin\Debug\netcoreapp3.0\ComercioOnline.Repositorio.dll
+C:\Repositórios\ReposProwayVideos\ComercioOnline\ComercioOnline.Servico\bin\Debug\netcoreapp3.0\ComercioOnline.Repositorio.pdb
